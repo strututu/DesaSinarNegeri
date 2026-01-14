@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [
+    { "src": "/dashboard", "dest": "/api/dashboard.php" },
+    { "src": "/residents/(.*)", "dest": "/api/residents/$1" },
+    { "src": "/families/(.*)", "dest": "/api/families/$1" },
+    { "src": "/letters/(.*)", "dest": "/api/letters/$1" },
+    { "src": "/news/(.*)", "dest": "/api/news/$1" },
+    { "src": "/officials/(.*)", "dest": "/api/officials/$1" },
+    { "src": "/logout", "dest": "/api/logout.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}
